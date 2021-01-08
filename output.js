@@ -105,6 +105,7 @@ function buttonprint() {
     print()
 
     document.getElementById("printbutton").style.visibility = "visible"
+    document.getElementById("resetbutton").style.visibility = "visible"
     document.getElementById("signature").style.visibility = "hidden"
     document.getElementById("signature2").style.visibility = "hidden"
     document.getElementById("signature3").style.visibility = "hidden"
