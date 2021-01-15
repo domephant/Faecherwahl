@@ -887,6 +887,7 @@ function mana() {
     checking_for_muku_gk(j)
     checking_for_fs(j)
   }
+  pflicht_label()
   sport_gk()
   buttons_religion_wn()
   buttons_fs()
@@ -949,6 +950,7 @@ function spra() {
     }
     console.log(help_informatik)
   }
+  pflicht_label()
   sport_gk()
   buttons_religion_wn()
   buttons_muku()
@@ -997,6 +999,7 @@ function muku() {
     }
     console.log(help_informatik)
   }
+  pflicht_label()
   sport_gk()
   buttons_religion_wn()
   buttons_fs()
@@ -1017,6 +1020,7 @@ function gese() {
     pflicht(j)
     checking_for_muku_gk(j)
   }
+  pflicht_label()
   sport_gk()
   buttons_religion_wn()
   buttons_muku()
@@ -1141,6 +1145,56 @@ function gese() {
   if (sessionStorage.getItem('counter_nw') == 1 && sessionStorage.getItem('counter_fs') == 1) {
     enable_2fs_2nw()
   }
+}
+function pflicht_label() {
+  var text = document.getElementById("pflicht").textContent
+  let deutsch_help = false
+  let mathe_help = false
+  let geschichte_help = false
+  let powi_help = false
+  for (let i = 1; i < 6; i++) {
+    if (sessionStorage.getItem('pfach' + i) == 'Deutsch') {
+      deutsch_help = true
+    }
+    if (sessionStorage.getItem('pfach' + i) == 'Mathe') {
+      mathe_help = true
+    }
+    if (sessionStorage.getItem('pfach' + i) == 'Geschichte') {
+      geschichte_help = true
+    }
+    if (sessionStorage.getItem('pfach' + i) == 'Politik Wirtschaft') {
+      powi_help = true
+    }
+  }
+  if (deutsch_help == false) {
+    if (text == 'Pflicht: ') {
+      text += 'De'
+    } else {
+      text += ', De'
+    }
+  }
+  if (mathe_help == false) {
+    if (text == 'Pflicht: ') {
+      text += 'Ma'
+    } else {
+      text += ', Ma'
+    }
+  }
+  if (geschichte_help == false) {
+    if (text == 'Pflicht: ') {
+      text += 'Ge'
+    } else {
+      text += ', Ge'
+    }
+  }
+  if (powi_help == false) {
+    if (text == 'Pflicht: ') {
+      text += 'PoWi'
+    } else {
+      text += ', PoWi '
+    }
+  }
+  document.getElementById("pflicht").textContent = text
 }
 //Setzt die Pflichtkurse, je nachdem, ob sie als Prüfungsfach bereits gewählt wurden
 function pflicht(j) {
@@ -1702,6 +1756,8 @@ function uncheck_reset_gk_manu() {
   sessionStorage.setItem('sport_gk', false)
 
   sessionStorage.setItem('wish_for_p4_p5', '')
+
+  document.getElementById("pflicht").textContent = 'Pflicht: '
   mana()
 }
 
@@ -1760,6 +1816,8 @@ function uncheck_reset_gk_spra() {
   sessionStorage.setItem('sport_gk', false)
 
   sessionStorage.setItem('wish_for_p4_p5', '')
+  
+  document.getElementById("pflicht").textContent = 'Pflicht: '
   spra()
 }
 
@@ -1815,6 +1873,8 @@ function uncheck_reset_gk_muku() {
   sessionStorage.setItem('sport_gk', false)
 
   sessionStorage.setItem('wish_for_p4_p5', '')
+
+  document.getElementById("pflicht").textContent = 'Pflicht: '
   muku()
 }
 
@@ -1877,5 +1937,7 @@ function uncheck_reset_gk_gese() {
   document.getElementById("Kunst2").checked = false
   document.getElementById("Musik2").checked = false
   document.getElementById("Religion2").checked = false
+
+  document.getElementById("pflicht").textContent = 'Pflicht: '
   gese()
 }
