@@ -1669,6 +1669,12 @@ function uncheck_reset_gk_manu() {
   document.getElementById("informatik").checked = false
   document.getElementById("bio").checked = false
   
+  enable_fachbutton("Religion2")
+  enable_fachbutton("PoWi2")
+  enable_fachbutton("Geschichte2")
+  enable_fachbutton("Kunst2")
+  enable_fachbutton("Musik2")
+
   document.getElementById("PoWi2").checked = false
   document.getElementById("Geschichte2").checked = false
   document.getElementById("Kunst2").checked = false
@@ -1720,12 +1726,18 @@ function uncheck_reset_gk_spra() {
   document.getElementById("chemie").checked = false
   document.getElementById("physik").checked = false
   document.getElementById("bio").checked = false
-  
+
+  enable_fachbutton("Religion2")
+  enable_fachbutton("PoWi2")
+  enable_fachbutton("Geschichte2")
+  enable_fachbutton("Kunst2")
+  enable_fachbutton("Musik2")
+
+  document.getElementById("Religion2").checked = false
   document.getElementById("PoWi2").checked = false
   document.getElementById("Geschichte2").checked = false
   document.getElementById("Kunst2").checked = false
   document.getElementById("Musik2").checked = false
-  document.getElementById("Religion2").checked = false
 
   sessionStorage.setItem('extra1', false)  
   sessionStorage.setItem('extra2', false)
@@ -1774,6 +1786,10 @@ function uncheck_reset_gk_muku() {
   document.getElementById("physik").checked = false
   document.getElementById("bio").checked = false
   
+  enable_fachbutton("Religion2")
+  enable_fachbutton("PoWi2")
+  enable_fachbutton("Geschichte2")
+
   document.getElementById("PoWi2").checked = false
   document.getElementById("Geschichte2").checked = false
   document.getElementById("Religion2").checked = false
@@ -1832,10 +1848,6 @@ function uncheck_reset_gk_gese() {
   document.getElementById("franzoesisch2").checked = false
   document.getElementById("englisch2").checked = false
 
-  document.getElementById("Kunst2").checked = false
-  document.getElementById("Musik2").checked = false
-  document.getElementById("Religion2").checked = false
-
   sessionStorage.setItem('extra1', false)  
   sessionStorage.setItem('extra2', false)
   sessionStorage.setItem('extra3', false)
@@ -1857,5 +1869,13 @@ function uncheck_reset_gk_gese() {
   sessionStorage.setItem('sport_gk', false)
 
   sessionStorage.setItem('wish_for_p4_p5', '')
+
+  enable_fachbutton("Religion2")
+  enable_fachbutton("Kunst2")
+  enable_fachbutton("Musik2")
+
+  document.getElementById("Kunst2").checked = false
+  document.getElementById("Musik2").checked = false
+  document.getElementById("Religion2").checked = false
   gese()
 }
