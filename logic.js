@@ -972,6 +972,11 @@ function spra() {
       disable_fachbutton('spanisch')
       disable_fachbutton('latein')
       disable_fachbutton('franzoesisch')
+
+      let text = document.getElementById("pflicht").textContent
+      text += ', En'
+      document.getElementById("pflicht").textContent = text
+        
       document.getElementById("div_fs").title = "Da bereits eine 2. Fremdsprache gewählt wurde, wird Englisch automatisch als Grundkurs gewählt"
     }
   } else {
