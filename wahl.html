@@ -79,21 +79,16 @@
                 sessionStorage.setItem('pfach' + i, null)
                 uncheck('pfach' + i + '.')
                 if (a == 1) {
-                    for (let j = 1; j < parseInt(sessionStorage.getItem('lp1') + 1); j++) {
-                        document.getElementById("pfach1." + j).disabled = false      
+                    for (let j = 1; j < parseInt(sessionStorage.getItem('lp1')) + 1; j++) {
+                        document.getElementById("pfach1." + j).disabled = false
                     }
                 }
             }
             logicvariables()
             for (let i = a + 1; i < 6; i++) {
-                let help_lp = sessionStorage.getItem('lp' + i)
-                for (let j = 1; j < help_lp + 1; j++) {
-                    try {
-                        document.getElementById("pfach" + i + "." + j + ".label").style.visibility = "hidden"
-                        document.getElementById("pfach" + i + "." + j).disabled = true      
-                    } catch (error) {
-                        
-                    }             
+                for (let j = 1; j < parseInt(sessionStorage.getItem('lp' + i)) + 1; j++) {
+                    document.getElementById("pfach" + i + "." + j + ".label").style.visibility = "hidden"
+                    document.getElementById("pfach" + i + "." + j).disabled = true      
                 }
             }
             for (let i = 1; i < a; i++) {
@@ -101,7 +96,6 @@
             }
             proof_in_advance('pfach' + a + '.', a)
             show_kf_abc()
-            document.getElementById("info2").value = 'Hier tauchen die Infos zu Kernfächern und den Bereichen auf.'
         }
         </script>
     </head>

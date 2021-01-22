@@ -720,6 +720,7 @@ function proof_in_advance(pfach, i) {
               break
             }
             document.getElementById(pfach + j + ".label").style.opacity = '1'
+            document.getElementById((pfach + j)).disabled = false
           } else {
             document.getElementById(pfach + j + ".label").style.opacity = '0.5'
             document.getElementById((pfach + j)).disabled = true
@@ -738,6 +739,7 @@ function proof_in_advance(pfach, i) {
               break
             }
             document.getElementById(pfach + j + ".label").style.opacity = '1'
+            document.getElementById((pfach + j)).disabled = false
           } else {
             document.getElementById(pfach + j + ".label").style.opacity = '0.5'
             document.getElementById((pfach + j)).disabled = true
@@ -754,6 +756,7 @@ function proof_in_advance(pfach, i) {
           } else {
             if (sessionStorage.getItem('w_nk') === 'true' && sessionStorage.getItem('sport_w') === 'true') {
               document.getElementById(pfach + j + ".label").style.opacity = '1'
+              document.getElementById((pfach + j)).disabled = false
             } else {
               document.getElementById(pfach + j + ".label").style.opacity = '0.5'
               document.getElementById((pfach + j)).disabled = true
@@ -777,6 +780,7 @@ function proof_in_advance_visibility(pfach, i, j, bereich, waehlbar, fachvariabl
         document.getElementById((pfach + j)).disabled = true
       } else {
         document.getElementById(pfach + j + ".label").style.opacity = '1'
+        document.getElementById((pfach + j)).disabled = false
       }
     }
   } else {
