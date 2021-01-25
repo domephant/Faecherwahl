@@ -115,7 +115,7 @@
                 if (sessionStorage.getItem('profil') != 'gese') {
                     firstPage.drawText(sessionStorage.getItem('pfach1'), {
                         x: 41,
-                        y: height / 2 + 71,
+                        y: height / 2 + 78,
                         size: 10,
                         font: helveticaFont,
                         color: rgb(0, 0, 0)
@@ -123,7 +123,7 @@
                 }
                 firstPage.drawText(sessionStorage.getItem('pfach2'), {
                     x: 146,
-                    y: height / 2 + 71,
+                    y: height / 2 + 78,
                     size: 10,
                     font: helveticaFont,
                     color: rgb(0, 0, 0)
@@ -131,7 +131,7 @@
                 if (sessionStorage.getItem('profil') != 'gese') {
                     firstPage.drawText(sessionStorage.getItem('pfach3'), {
                         x: 251,
-                        y: height / 2 + 71,
+                        y: height / 2 + 78,
                         size: 10,
                         font: helveticaFont,
                         color: rgb(0, 0, 0)
@@ -139,25 +139,24 @@
                 }
                 firstPage.drawText(sessionStorage.getItem('pfach4'), {
                     x: 356,
-                    y: height / 2 + 71,
+                    y: height / 2 + 78,
                     size: 10,
                     font: helveticaFont,
                     color: rgb(0, 0, 0)
                 })
                 firstPage.drawText(sessionStorage.getItem('pfach5'), {
                     x: 461,
-                    y: height / 2 + 71,
+                    y: height / 2 + 78,
                     size: 10,
                     font: helveticaFont,
                     color: rgb(0, 0, 0)
                 })
 
-                let lk_x = 175
                 let gk_x
                 if (sessionStorage.getItem('profil') != 'mana') {
                     gk_x = 249.25
                 } else {
-                    
+                    gk_x = 252.75
                 }
 
                 for (let i = 1; i < 6; i++) {
@@ -166,35 +165,35 @@
                             if (i < 4) {
                                 draw_cross(175, 410, firstPage)
                             } else {
-                                draw_cross(249.25, 410, firstPage)
+                                draw_cross(gk_x, 410, firstPage)
                             }
                             break;
                         case 'Chemie':
                             if (i < 4) {
                                 draw_cross(175, 391, firstPage)
                             } else {
-                                draw_cross(249.25, 391, firstPage)
+                                draw_cross(gk_x, 391, firstPage)
                             }
                             break;
                         case 'Deutsch':
                             if (i < 4) {
                                 draw_cross(175, 361, firstPage)
                             } else {
-                                draw_cross(249.25, 361, firstPage)
+                                draw_cross(gk_x, 361, firstPage)
                             }
                             break;
                         case 'Englisch':
                             if (i < 4) {
                                 draw_cross(175, 346.25, firstPage)
                             } else {
-                                draw_cross(249.25, 346.25, firstPage)
+                                draw_cross(gk_x, 346.25, firstPage)
                             }
                             break;
                         case 'Französisch':
                             if (i < 4) {
                                 draw_cross(175, 317, firstPage)
                             } else {
-                                draw_cross(249.25, 317, firstPage)
+                                draw_cross(gk_x, 317, firstPage)
                             }
                             break;
                         case 'Geschichte':
@@ -203,49 +202,49 @@
                                     draw_cross(175, 302, firstPage)
                                 }
                             } else {
-                                draw_cross(249.25, 302, firstPage)
+                                draw_cross(gk_x, 302, firstPage)
                             }
                             break;
                         case 'Informatik':
                             if (i < 4) {
                                 draw_cross(175, 288, firstPage)
                             } else {
-                                draw_cross(249.25, 288, firstPage)
+                                draw_cross(gk_x, 288, firstPage)
                             }
                             break;
                         case 'Kunst':
                             if (i < 4) {
                                 draw_cross(175, 273, firstPage)
                             } else {
-                                draw_cross(249.25, 273, firstPage)
+                                draw_cross(gk_x, 273, firstPage)
                             }
                             break;
                         case 'Latein':
                             if (i < 4) {
                                 draw_cross(175, 259, firstPage)
                             } else {
-                                draw_cross(249.25, 259, firstPage)
+                                draw_cross(gk_x, 259, firstPage)
                             }
                             break;
                         case 'Mathe':
                             if (i < 4) {
                                 draw_cross(175, 243.5, firstPage)
                             } else {
-                                draw_cross(249.25, 243.5, firstPage)
+                                draw_cross(gk_x, 243.5, firstPage)
                             }
                             break;
                         case 'Musik':
                             if (i < 4) {
                                 draw_cross(175, 229.5, firstPage)
                             } else {
-                                draw_cross(249.25, 229.5, firstPage)
+                                draw_cross(gk_x, 229.5, firstPage)
                             }
                             break;
                         case 'Physik':
                             if (i < 4) {
                                 draw_cross(175, 214.5, firstPage)
                             } else {
-                                draw_cross(249.25, 214.5, firstPage)
+                                draw_cross(gk_x, 214.5, firstPage)
                             }
                             break;
                         case 'Politik Wirtschaft':
@@ -254,14 +253,14 @@
                                     draw_cross(175, 199.75, firstPage)
                                 }
                             } else {
-                                draw_cross(249.25, 199.75, firstPage)
+                                draw_cross(gk_x, 199.75, firstPage)
                             }
                             break;
                         case 'Spanisch':
                             if (i < 4) {
                                 draw_cross(175, 156, firstPage)
                             } else {
-                                draw_cross(249.25, 156, firstPage)
+                                draw_cross(gk_x, 156, firstPage)
                             }
                             break;
                     }
@@ -271,64 +270,64 @@
                     if (sessionStorage.getItem('extra' + i) == 'true') {
                         switch (document.getElementById("extra" + i + "label").innerText) {
                             case "Biologie:":
-                                draw_cross(249.25, 410, firstPage)
+                                draw_cross(gk_x, 410, firstPage)
                                 break;
                             case "Chemie:":
-                                draw_cross(249.25, 391, firstPage)
+                                draw_cross(gk_x, 391, firstPage)
                                 break;
                             case "Darstellendes Spiel:":
-                                draw_cross(249.25, 376, firstPage)
+                                draw_cross(gk_x, 376, firstPage)
                                 break;
                             case "Deutsch:":
-                                draw_cross(249.25, 361, firstPage)
+                                draw_cross(gk_x, 361, firstPage)
                                 break;
                             case "Englisch:":
-                                draw_cross(249.25, 346.25, firstPage)
+                                draw_cross(gk_x, 346.25, firstPage)
                                 break;
                             case "Erdkunde:":
-                                draw_cross(249.25, 332, firstPage)
+                                draw_cross(gk_x, 332, firstPage)
                                 break;
                             case "Französisch:":
-                                draw_cross(249.25, 317, firstPage)
+                                draw_cross(gk_x, 317, firstPage)
                                 break;
                             case "Geschichte:":
-                                draw_cross(249.25, 302, firstPage)
+                                draw_cross(gk_x, 302, firstPage)
                                 break;
                             case "Informatik:":
-                                draw_cross(249.25, 288, firstPage)
+                                draw_cross(gk_x, 288, firstPage)
                                 break;
                             case "Kunst:":
-                                draw_cross(249.25, 273, firstPage)
+                                draw_cross(gk_x, 273, firstPage)
                                 break;
                             case "Latein:":
-                                draw_cross(249.25, 259, firstPage)
+                                draw_cross(gk_x, 259, firstPage)
                                 break;
                             case "Mathematik:":
-                                draw_cross(249.25, 243.5, firstPage)
+                                draw_cross(gk_x, 243.5, firstPage)
                                 break;
                             case "Musik:":
-                                draw_cross(249.25, 229.5, firstPage)
+                                draw_cross(gk_x, 229.5, firstPage)
                                 break;
                             case "Physik:":
-                                draw_cross(249.25, 214.5, firstPage)
+                                draw_cross(gk_x, 214.5, firstPage)
                                 break;
                             case "Politik Wirtschaft:":
-                                draw_cross(249.25, 199.75, firstPage)
+                                draw_cross(gk_x, 199.75, firstPage)
                                 break;
                             case "Religion:":
-                                draw_cross(249.25, 184.75, firstPage)
+                                draw_cross(gk_x, 184.75, firstPage)
                                 break;
                             case "Spanisch:":
-                                draw_cross(249.25, 156, firstPage)
+                                draw_cross(gk_x, 156, firstPage)
                                 break;
                             case "Werte und Normen:":
-                                draw_cross(249.25, 112.25, firstPage)
+                                draw_cross(gk_x, 112.25, firstPage)
                                 break;
                         }
                     }                    
                 }
                 if (sessionStorage.getItem('pfach5') == 'Sport') {
-                    draw_cross(249.25, 127.25, firstPage)
+                    draw_cross(gk_x, 127.25, firstPage)
                 }
                 const pdfBytes = await pdfDoc.save()
                 download(pdfBytes, "Wahlen_QP_" + name + " " + lastname + ".pdf", "application/pdf")
