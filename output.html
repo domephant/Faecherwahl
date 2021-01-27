@@ -16,7 +16,7 @@
       </head>
 
     <body onload="output(), check_for_gewaehlt_output()"class="bgimg">
-        <div class="grid-container3"> 
+        <div class="grid-container3">
 
             <button class="printbutton button1" onclick="modifyPdf()" id="printbutton">PDF herunterladen</button>
             <button class="resetbutton button1" onclick="location.href='faecherwahl_main.html'" type="button" id="resetbutton">Nochmal wählen</button>
@@ -34,7 +34,7 @@
             <label for="pfach4" class="pfach4label" id="pfach4label">Prüfungsfach 4:</label>
             <input type="text" class="pfach5" name="pfach5" id="pfach5" readonly>
             <label for="pfach5" class="pfach5label" id="pfach5label">Prüfungsfach 5:</label>
-            
+
 
             <input type="text" class="extra1" name="extra1" id="extra1" readonly>
             <label for="extra1" class="extra1label" id="extra1label">Biologie:</label>
@@ -96,7 +96,7 @@
                 const pages = pdfDoc.getPages()
                 const firstPage = pages[0]
                 const { width, height } = firstPage.getSize()
-                
+
                 firstPage.drawText(name, {
                     x: 135,
                     y: height - 80,
@@ -264,7 +264,7 @@
                             }
                             break;
                     }
-                    
+
                 }
                 for (let i = 1; i < 19; i++) {
                     if (sessionStorage.getItem('extra' + i) == 'true') {
@@ -324,16 +324,44 @@
                                 draw_cross(gk_x, 112.25, firstPage)
                                 break;
                         }
-                    }                    
+                    }
                 }
                 if (sessionStorage.getItem('pfach5') == 'Sport') {
                     draw_cross(gk_x, 127.25, firstPage)
+                }
+                switch (sessionStorage.getItem('profil')) {
+                  case 'mana':
+                    switch (sessionStorage.getItem('wish_for_p4_p5')) {
+                      case 'Geschichte':
+                        draw_cross(gk_x, 112.25, firstPage)
+                        break;
+                      case 'Religion':
+                        draw_cross(gk_x, 112.25, firstPage)
+                        break;
+                      case 'Politik Wirtschaft':
+                        break;
+                      case 'Kunst':
+
+                        break;
+                      case 'Musik':
+
+                        break;
+                    }
+                    break;
+                  case 'spra':
+
+                    break;
+                  case 'muku':
+
+                    break;
+                  case 'gese':
+
+                    break;
                 }
                 const pdfBytes = await pdfDoc.save()
                 download(pdfBytes, "Wahlen_QP_" + name + " " + lastname + ".pdf", "application/pdf")
             }
 
-            
             function draw_cross(a, e, firstPage) {
                 firstPage.drawLine({
                     color: rgb(0, 0, 0),
