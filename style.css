@@ -267,6 +267,7 @@ body, html {height: 100%}
     margin-top: auto;
     margin-bottom: auto;
     text-align: center;
+    align-self: center;
 }
 .reli5, .muku5, .fsprach5, .erdkunde5, .natu5, .informatik5, .fsprach5-2, .natu5-2, .natu5-3{
     padding: 5px;
